@@ -1,0 +1,61 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ff7e5f;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.turnoCard {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.turnoCard h2 {
+    margin: 0 0 10px 0;
+}
+
+.turnoCard p {
+    margin: 5px 0;
+}
+
+.turnoCard .timer {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.turnoCard button {
+    padding: 8px 15px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #ff7e5f;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.turnoCard button:hover {
+    background: #feb47b;
+}
+
+input.punteggio {
+    width: 50px;
+    text-align: center;
+}

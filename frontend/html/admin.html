@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <nav>
+            <button class="tab-btn active" data-tab="users">Utenti</button>
+            <button class="tab-btn" data-tab="teams">Squadre & Animati</button>
+            <button class="tab-btn" data-tab="games">Turni Giochi</button>
+            <button class="tab-btn" data-tab="leaderboard">Classifica</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sezione Utenti: gestione degli utenti -->
+        <section class="tab-content active" id="users">
+            <button id="addUserBtn">+ Nuovo Utente</button>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ruolo</th>
+                        <th>Squadra</th>
+                        <th>Note</th>
+                        <th>Azioni</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Sezione Squadre & Animati: gestione squadre e relativi animatori -->
+        <section class="tab-content" id="teams">
+            <button id="addTeamBtn">+ Nuova Squadra</button>
+            <table id="teamsTable">
+                <thead>
+                    <tr>
+                        <th>Nome Squadra</th>
+                        <th>Colore</th>
+                        <th>Punteggio Totale</th>
+                        <th>Azioni</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div id="animatiSection">
+                <h3>Animati Squadra Selezionata</h3>
+                <table id="animatiTable">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Presenza</th>
+                            <th>Pranzo</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sezione Turni Giochi: gestione dei turni, giochi, arbitri e campi -->
+        <section class="tab-content" id="games">
+            <table id="gamesTable">
+                <thead>
+                    <tr>
+                        <th>Turno</th>
+                        <th>Gioco</th>
+                        <th>Squadra 1</th>
+                        <th>Squadra 2</th>
+                        <th>Arbitri</th>
+                        <th>Campo</th>
+                        <th>Azioni</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Sezione Classifica: visualizzazione punteggi e medie punti delle squadre -->
+        <section class="tab-content" id="leaderboard">
+            <table id="leaderboardTable">
+                <thead>
+                    <tr>
+                        <th>Squadra</th>
+                        <th>Punti Totali</th>
+                        <th>Media Punti</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Modale generico per operazioni di inserimento/modifica -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
