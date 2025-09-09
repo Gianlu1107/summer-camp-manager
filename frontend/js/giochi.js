@@ -4,7 +4,7 @@ document.getElementById("arbitroName").textContent = `Arbitro ID: ${arbitroId}`;
 
 async function loadTurni() {
     try {
-        const res = await fetch("http://localhost:5000/giochi/get_turni", {
+        const res = await fetch("http://192.168.1.111:5000/giochi/get_turni", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ arbitro_id: arbitroId })
@@ -55,7 +55,7 @@ async function loadTurni() {
                 const punteggio2 = card.querySelector(`input[data-squadra='${turno.squadra2}']`).value;
 
                 try {
-                    const response = await fetch("http://localhost:5000/giochi/submit_punteggio", {
+                    const response = await fetch("http://192.168.1.111:5000/giochi/submit_punteggio", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({

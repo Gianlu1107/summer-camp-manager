@@ -8,7 +8,7 @@ document.getElementById("teamName").textContent = `Squadra: ${loggedInUser.team_
 async function loadAnimati() {
     try {
         const squadraId = loggedInUser.team_id;
-        const url = new URL("http://localhost:5000/animati/get_animati");
+        const url = new URL("http://192.168.1.111:5000/animati/get_animati");
         url.searchParams.append("team_id", squadraId);
 
         const response = await fetch(url.toString(), {
@@ -74,7 +74,7 @@ async function saveAnimati() {
     console.log("Dati inviati al backend:", data);
 
     try {
-        const response = await fetch("http://localhost:5000/animati/send_animati", {
+        const response = await fetch("http://192.168.1.111:5000/animati/send_animati", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ kids: data })
